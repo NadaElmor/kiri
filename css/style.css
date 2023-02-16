@@ -1,0 +1,247 @@
+/* ============General============ */
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald&family=Roboto&family=Tajawal:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito&family=Oswald&family=Roboto&family=Tajawal:wght@300&display=swap");
+
+:root {
+  --maincolor: #e65f78;
+}
+
+* {
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.rose-color {
+  color: var(--maincolor);
+}
+section {
+  padding: 70px 0px;
+}
+.main-btn {
+  all: unset;
+  background-color: var(--maincolor);
+  color: white;
+  padding: 10px 25px;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+.main-btn:hover {
+  background-color: #e65f78b5;
+  color: black;
+}
+/* ============Start navbar======= */
+nav {
+  z-index: 999;
+  background-color: rgba(128, 128, 128, 0.898);
+}
+nav .nav-item a {
+  color: white;
+  transition: color 0.3s;
+}
+nav .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+  color: var(--maincolor);
+}
+/* ============End navbar======= */
+
+/* ============Start setting icon======= */
+.setting {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  font-size: 20px;
+  padding: 5px 10px;
+  color: white;
+  background-color: #2b2424;
+  z-index: 99;
+  border-radius: 0 5px 5px 0;
+}
+/* ============End setting icon======== */
+
+/* ============Start navbar============ */
+.down {
+  height: 30px;
+  width: 20px;
+  border: solid 2px white;
+  border-radius: 10px;
+}
+/* ============End navbar============ */
+
+/* ============Start header============ */
+#home {
+  background: url(../images/header-bg.jpg) center fixed no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+#home .layer {
+  background-color: rgba(0, 0, 0, 0.817);
+}
+#home h1 {
+  font-size: 50px;
+}
+#home a {
+  font-weight: 700;
+  font-size: 14px;
+}
+#home .download {
+  all: unset;
+  display: inline-block;
+  padding: 15px 25px;
+  border: solid 2px white;
+  border-radius: 50px;
+  color: white;
+  transition: background-color 1s, color 1s;
+  cursor: pointer;
+}
+#home .download:hover {
+  color: black;
+  background-color: white;
+}
+/* scroll */
+#home .scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 45px;
+  border: 2px solid white;
+  border-radius: 50px;
+  z-index: 99;
+  animation: up-down 2s infinite;
+}
+#home .scroll::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50px;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%);
+}
+@keyframes up-down {
+  50% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 15%;
+  }
+}
+/* ============End header========= */
+
+/* ============start about======== */
+#about .icons li {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  border: solid 1px gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+#about .icons li:hover {
+  color: var(--maincolor);
+  border-color: var(--maincolor);
+}
+/* ============End about======== */
+
+/* ============start services======== */
+#services {
+  background-color: #f8f9fa;
+}
+/* ============end services======== */
+
+/* ============start portfolio======== */
+
+#portfolio .nav-link {
+  color: black;
+}
+#portfolio .nav-item .active,
+#portfolio .nav-link {
+  transition: 1s;
+}
+#portfolio .nav-item .active,
+#portfolio .nav-link:hover {
+  color: white;
+  background-color: var(--maincolor);
+}
+#portfolio .item {
+  position: relative;
+  overflow: hidden;
+}
+#portfolio .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.612);
+  transform: translateY(100%);
+  transition: transform 0.3s 0.4s;
+}
+#portfolio .item:hover .layer {
+  transform: translateY(0%);
+  cursor: pointer;
+}
+#portfolio .txt {
+  top: 150%;
+  transition: top 0.3s 0.2s;
+}
+#portfolio .item:hover .txt {
+  top: 50%;
+}
+#portfolio .item img {
+  transition: transform 0.3s 0.4s;
+}
+#portfolio .item:hover img {
+  transform: scale(1.2);
+}
+/* ============end portfolio======== */
+
+/* ============start blog======== */
+#blog {
+  background-color: #f8f9fa;
+}
+
+/* ============end blog======== */
+
+/* ============start footer======== */
+footer {
+  background-color: #212121;
+}
+footer li {
+  margin: 0px 10px;
+}
+footer li {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+footer a {
+  color: gray;
+}
+footer a:hover {
+  color: var(--maincolor);
+}
+/* ============end footer======== */
